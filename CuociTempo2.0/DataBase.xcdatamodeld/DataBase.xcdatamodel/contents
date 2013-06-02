@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Alimento" representedClassName="Alimento" syncable="YES">
+        <attribute name="cottura250" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cottura500" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cottura1000" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Alimento" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>
