@@ -14,6 +14,8 @@
 {
     // Override point for customization after application launch.s
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"MySqlite.slqite"];
+    
+    
     return YES;
 }
 							
@@ -37,11 +39,25 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+  /*  NSUserDefaults * userD = [NSUserDefaults standardUserDefaults];
+    
+    float x = [userD floatForKey:@"x"];
+    float y = [userD floatForKey:@"y"];
+    
+    CGPoint newCeter = CGPointMake(x, y);
+
+    
+    [home.collectionView setCenter:newCeter];*/
+    
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    
 }
 
 @end

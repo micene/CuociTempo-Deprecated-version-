@@ -10,6 +10,8 @@
 		1D08359A1754FC2F00D7B003 /* uovo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D0835991754FC2F00D7B003 /* uovo.jpg */; };
 		1D08359E1755013700D7B003 /* PesoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D08359D1755013700D7B003 /* PesoViewController.m */; };
 		1D0BC4A61725585200798850 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BC4A51725585200798850 /* TimerViewController.m */; };
+		1D20FB0C175F24E4008B6859 /* TypeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20FB0B175F24E4008B6859 /* TypeImageView.m */; };
+		1D20FB0E175F786E008B6859 /* verdure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D20FB0D175F786E008B6859 /* verdure.jpg */; };
 		1D344A77175141F100944C61 /* frutta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D344A76175141F100944C61 /* frutta.jpg */; };
 		1D53065B174B9A8900B2B701 /* Alimento.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D53065A174B9A8900B2B701 /* Alimento.m */; };
 		1D65B9D21722B6D0002B990F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D65B9D11722B6D0002B990F /* UIKit.framework */; };
@@ -71,6 +73,7 @@
 		1DA2B5C51758ECFD00920AA7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA2B5C41758ECFD00920AA7 /* AVFoundation.framework */; };
 		1DA2B5CA1758EDAE00920AA7 /* Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2B5C71758EDAE00920AA7 /* Alarm.mp3 */; };
 		1DA2B5CE1758F1E600920AA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA2B5CD1758F1E600920AA7 /* MediaPlayer.framework */; };
+		1DA9A485175DFC0C00D42AC9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9A484175DFC0C00D42AC9 /* HomeViewController.m */; };
 		1DF810E8172EB75100D91609 /* ListaCompletaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF810E7172EB75100D91609 /* ListaCompletaViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		1D08359D1755013700D7B003 /* PesoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PesoViewController.m; sourceTree = "<group>"; };
 		1D0BC4A41725585200798850 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		1D0BC4A51725585200798850 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		1D20FB0A175F24E4008B6859 /* TypeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeImageView.h; sourceTree = "<group>"; };
+		1D20FB0B175F24E4008B6859 /* TypeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeImageView.m; sourceTree = "<group>"; };
+		1D20FB0D175F786E008B6859 /* verdure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = verdure.jpg; sourceTree = "<group>"; };
 		1D344A76175141F100944C61 /* frutta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frutta.jpg; sourceTree = "<group>"; };
 		1D530659174B9A8900B2B701 /* Alimento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alimento.h; sourceTree = "<group>"; };
 		1D53065A174B9A8900B2B701 /* Alimento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alimento.m; sourceTree = "<group>"; };
@@ -178,6 +184,8 @@
 		1DA2B5C41758ECFD00920AA7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1DA2B5C71758EDAE00920AA7 /* Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alarm.mp3; sourceTree = "<group>"; };
 		1DA2B5CD1758F1E600920AA7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1DA9A483175DFC0C00D42AC9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1DA9A484175DFC0C00D42AC9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1DF810E6172EB75100D91609 /* ListaCompletaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaCompletaViewController.h; sourceTree = "<group>"; };
 		1DF810E7172EB75100D91609 /* ListaCompletaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaCompletaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +207,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D20FB08175F1656008B6859 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DA9A483175DFC0C00D42AC9 /* HomeViewController.h */,
+				1DA9A484175DFC0C00D42AC9 /* HomeViewController.m */,
+				1D20FB0A175F24E4008B6859 /* TypeImageView.h */,
+				1D20FB0B175F24E4008B6859 /* TypeImageView.m */,
+				1DF810E6172EB75100D91609 /* ListaCompletaViewController.h */,
+				1DF810E7172EB75100D91609 /* ListaCompletaViewController.m */,
+				1D08359C1755013700D7B003 /* PesoViewController.h */,
+				1D08359D1755013700D7B003 /* PesoViewController.m */,
+				1D65B9E01722B6D1002B990F /* AppDelegate.h */,
+				1D65B9E11722B6D1002B990F /* AppDelegate.m */,
+				1D530659174B9A8900B2B701 /* Alimento.h */,
+				1D53065A174B9A8900B2B701 /* Alimento.m */,
+				1D0BC4A41725585200798850 /* TimerViewController.h */,
+				1D0BC4A51725585200798850 /* TimerViewController.m */,
+				1D65BA5D1722BE92002B990F /* TypeCell.h */,
+				1D65BA5E1722BE92002B990F /* TypeCell.m */,
+				1D65BA5A1722BE63002B990F /* HomeCollectionViewController.h */,
+				1D65BA5B1722BE63002B990F /* HomeCollectionViewController.m */,
+				1D65BA541722B866002B990F /* ListaTipoTableViewController.h */,
+				1D65BA551722B866002B990F /* ListaTipoTableViewController.m */,
+				1D65BA571722B87C002B990F /* DataManager.h */,
+				1D65BA581722B87C002B990F /* DataManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1D20FB09175F16BB008B6859 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D65BA4E1722B7DC002B990F /* DataBase.xcdatamodeld */,
+				1D65B9E91722B6D1002B990F /* MainStoryboard.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		1D65B9C51722B6D0002B990F = {
 			isa = PBXGroup;
 			children = (
@@ -232,26 +278,8 @@
 		1D65B9D71722B6D0002B990F /* CuociTempo2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				1DF810E6172EB75100D91609 /* ListaCompletaViewController.h */,
-				1DF810E7172EB75100D91609 /* ListaCompletaViewController.m */,
-				1D08359C1755013700D7B003 /* PesoViewController.h */,
-				1D08359D1755013700D7B003 /* PesoViewController.m */,
-				1D65B9E01722B6D1002B990F /* AppDelegate.h */,
-				1D65BA4E1722B7DC002B990F /* DataBase.xcdatamodeld */,
-				1D530659174B9A8900B2B701 /* Alimento.h */,
-				1D53065A174B9A8900B2B701 /* Alimento.m */,
-				1D65B9E91722B6D1002B990F /* MainStoryboard.storyboard */,
-				1D0BC4A41725585200798850 /* TimerViewController.h */,
-				1D0BC4A51725585200798850 /* TimerViewController.m */,
-				1D65BA5D1722BE92002B990F /* TypeCell.h */,
-				1D65BA5E1722BE92002B990F /* TypeCell.m */,
-				1D65B9E11722B6D1002B990F /* AppDelegate.m */,
-				1D65BA5A1722BE63002B990F /* HomeCollectionViewController.h */,
-				1D65BA5B1722BE63002B990F /* HomeCollectionViewController.m */,
-				1D65BA541722B866002B990F /* ListaTipoTableViewController.h */,
-				1D65BA551722B866002B990F /* ListaTipoTableViewController.m */,
-				1D65BA571722B87C002B990F /* DataManager.h */,
-				1D65BA581722B87C002B990F /* DataManager.m */,
+				1D20FB09175F16BB008B6859 /* Resources */,
+				1D20FB08175F1656008B6859 /* Classes */,
 				1DA2B5C61758EDAE00920AA7 /* Sound */,
 				1D65BA641722C9F8002B990F /* Immagini */,
 				1D65B9F41722B727002B990F /* MagicalRecord */,
@@ -380,6 +408,7 @@
 			children = (
 				1D0835991754FC2F00D7B003 /* uovo.jpg */,
 				1D344A76175141F100944C61 /* frutta.jpg */,
+				1D20FB0D175F786E008B6859 /* verdure.jpg */,
 				1D65BA601722C255002B990F /* carne.jpg */,
 				1D65BA611722C255002B990F /* pesce.jpg */,
 				1D65BA651722C9F8002B990F /* immagini */,
@@ -488,6 +517,7 @@
 				1D344A77175141F100944C61 /* frutta.jpg in Resources */,
 				1D08359A1754FC2F00D7B003 /* uovo.jpg in Resources */,
 				1DA2B5CA1758EDAE00920AA7 /* Alarm.mp3 in Resources */,
+				1D20FB0E175F786E008B6859 /* verdure.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +565,8 @@
 				1DF810E8172EB75100D91609 /* ListaCompletaViewController.m in Sources */,
 				1D53065B174B9A8900B2B701 /* Alimento.m in Sources */,
 				1D08359E1755013700D7B003 /* PesoViewController.m in Sources */,
+				1DA9A485175DFC0C00D42AC9 /* HomeViewController.m in Sources */,
+				1D20FB0C175F24E4008B6859 /* TypeImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

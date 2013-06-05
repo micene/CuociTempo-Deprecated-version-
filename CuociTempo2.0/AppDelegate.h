@@ -6,10 +6,13 @@
 //  Copyright (c) 2013 Stefano. All rights reserved.
 //
 
+#import "HomeCollectionViewController.h"
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

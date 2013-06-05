@@ -18,14 +18,6 @@
 
 @implementation ListaCompletaViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -82,13 +74,9 @@
         NSIndexPath * ip = [self.tableView indexPathForSelectedRow];
         
         PesoViewController *peso = segue.destinationViewController;
-        
-  //      NSLog(@"item %i row%i",ip.item,ip.row);
-        
+                
         peso.alimento = [[DataManager sharedClass] dammiAlimentoCompleto:ip.row nome:self.sezioni[ip.section]];
         
-        
-//        NSLog(@"pesoooo%@",peso.alimento.tipo);
         
     }
 }

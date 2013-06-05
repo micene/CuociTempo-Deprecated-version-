@@ -9,9 +9,7 @@
 #import "TypeCell.h"
 
 @interface TypeCell ()
-{
-    CGPoint p;
-}
+
 @end
 
 @implementation TypeCell

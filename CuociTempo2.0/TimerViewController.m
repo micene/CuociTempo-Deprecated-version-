@@ -144,7 +144,7 @@
     int hours = countdown/3600;
     int minute = ((countdown/60) - hours*60);
     int second = (countdown - ((minute *60) + hours *3600));
-    //NSLog(@"%i ore\n%i minuti\n %i secondi",hours,minute,second);
+    
     return [NSString stringWithFormat:@"%02i:%02i:%02i",hours,minute,second];
 }
 

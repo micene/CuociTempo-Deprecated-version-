@@ -36,12 +36,9 @@
 {
     [super viewDidLoad];
     
-
-    
     [[DataManager sharedClass]setup];
     
     self.typeImage = @[@"Carne",@"Pesce",@"Frutta",@"Uovo"];
-    
     
 }
 
@@ -115,6 +112,21 @@
         
         //infine azzeriamo la traslazione in modo che al tocco successivo il recognizer sia azzerato
         [sender setTranslation:CGPointZero inView:[piece superview]];
+        
+       /* CGPoint newCenter = piece.center;
+        
+        float x = newCenter.x;
+        
+        float y = newCenter.y;
+        
+        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        [userDefaults setFloat:x forKey:@"COORD X"];
+        [userDefaults setFloat:y forKey:@"COORD Y"];
+        
+        [userDefaults synchronize];
+        
+        NSLog(@"%f , %f",x,y);*/
         
     }
 }
