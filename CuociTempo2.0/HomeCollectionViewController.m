@@ -22,15 +22,6 @@
 
 @implementation HomeCollectionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.collectionView.backgroundColor = [UIColor whiteColor];
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {

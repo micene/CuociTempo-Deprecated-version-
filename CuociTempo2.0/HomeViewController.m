@@ -12,13 +12,7 @@
 #define DIMENSION 50
 
 @interface HomeViewController ()
-{
- 
-    NSMutableArray * arrayType ;    
-    float x;
-    float y;
-    
-}
+
 @end
 
 
@@ -28,12 +22,10 @@
 {
     [super viewDidLoad];
 
-    self.typeImage = @[@"Carne.jpg",@"Pesce.jpg",@"Frutta.jpg",@"Uovo.jpg",@"Verdure.jpg"];
+    self.typeImage = @[@"Carne.jpg",@"Pesce.jpg",@"Verdure.jpg",@"Uovo.jpg",@"Frutta.jpg"];
     
     [self creaFinestra];
-    
-   
-    
+        
 }
 
 
@@ -50,7 +42,7 @@
             self.type.image =  [UIImage imageNamed:self.typeImage[i]];
             
             self.type.tag = i;
-            
+                        
             NSLog(@"i%i - %@",i,NSStringFromCGRect(self.type.frame));
             
             [self.view addSubview:self.type];
@@ -59,9 +51,8 @@
         
             [prefs setObject:[NSNumber numberWithBool:YES] forKey:@"primoAvvio"];
 
-        
         }
-    
+        
     }else{
     
         for(int i = 0; i < self.typeImage.count; i++){
@@ -71,16 +62,50 @@
             self.type.tag = i;
             
             self.type.image =  [UIImage imageNamed:self.typeImage[i]];
-
+            
             [self.view addSubview:self.type];
             
         }
-        
+    
     }
-
+    
+    
+    //[self performaSegue];
+        
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+-(void)performaSegue{
+    
+    if([self.type.doveVado isEqualToString:@"multipla"])
+        
+        [self performSegueWithIdentifier:@"multipla" sender:self.type];
+
+    else
+        
+        [self performSegueWithIdentifier:@"single" sender:self.type];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+
+    //verifichiamo ql "segue" vogliamo visualizzare attraverso  identifier
+    if ([segue.identifier isEqualToString:@"multipla"]) {
+        
+        NSLog(@"carne");
+        
+        /*NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+         
+         PizzaModel * pizzaEstratta = self.storage[indexPath.row];
+         
+         DettaglioController * dett =
+         segue.destinationViewController; //estraiamo dallo storyBoard il ViewController da visuaizzare
+         
+         dett.pizza = pizzaEstratta; //assegnamo alla ViewController la cella selezionata*/
+        
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -158,5 +183,4 @@
     }
     
 }*/
-
 @end

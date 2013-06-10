@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class TypeImageView;
 
-@interface HomeViewController : UIViewController//<UIGestureRecognizerDelegate>
+@interface HomeViewController : UIViewController <UIGestureRecognizerDelegate>
 
 //@property (nonatomic,retain) UIPanGestureRecognizer *pan;
 

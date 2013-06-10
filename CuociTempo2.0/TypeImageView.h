@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TypeImageView : UIImageView<UIGestureRecognizerDelegate>
+@class HomeViewController;
 
+@interface TypeImageView : UIImageView <UIGestureRecognizerDelegate>
+
+@property (weak,nonatomic) NSString * doveVado;
+
+@property (weak,nonatomic) HomeViewController *home;
 
 @property (retain,nonatomic) UIPanGestureRecognizer * pan;
 
-@property (strong,nonatomic) NSDictionary * pref;
-
+@property (retain,nonatomic) UITapGestureRecognizer * touch;
 
 
 @end

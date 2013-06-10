@@ -7,11 +7,14 @@
 //
 
 #import "TypeImageView.h"
+//#import "HomeViewController.h"
 
 @implementation TypeImageView{
     
     UIView *piece;
+
 }
+
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,11 +22,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(gesture:)];
+        self.pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(sposta:)];
+
+        self.touch = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tocca:)];
+        
+        self.touch.numberOfTapsRequired = 1;
+        
+        self.touch.delegate  = self;
         
         [self setUserInteractionEnabled:YES];
         
-        [self addGestureRecognizer:pan];
+        [self addGestureRecognizer:self.pan];
+        
+        [self addGestureRecognizer:self.touch];
 
     }
     
@@ -52,7 +63,7 @@
     return _pan;
 }*/
 
--(void)gesture:(UIPanGestureRecognizer*)sender
+-(void)sposta:(UIPanGestureRecognizer*)sender
 {
     
     //se l'img e cambiata o "finito"
@@ -78,10 +89,29 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         
-//        NSLog(@"tag %i",piece.tag);
         
     }
 
+}
+
+-(void)tocca:(UITapGestureRecognizer*)sender{
+    if(sender.state == UIGestureRecognizerStatePossible)
+    
+        NSLog(@"possibile");
+    
+    else if(sender.state == UIGestureRecognizerStateRecognized){
+        
+        NSLog(@"ciao");
+        
+    if(self.tag <= 2)
+        
+        self.doveVado = @"multipla";
+    
+    else
+        
+        self.doveVado = @"single";
+    }
+        
 }
 
 @end
