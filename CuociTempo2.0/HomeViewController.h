@@ -11,7 +11,7 @@
 
 @interface HomeViewController : UIViewController <UIGestureRecognizerDelegate>
 
-//@property (nonatomic,retain) UIPanGestureRecognizer *pan;
+@property (retain,nonatomic) UITapGestureRecognizer * touch;
 
 //- (IBAction)pan:(id)sender;
 

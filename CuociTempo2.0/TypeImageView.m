@@ -7,7 +7,7 @@
 //
 
 #import "TypeImageView.h"
-//#import "HomeViewController.h"
+#import "HomeViewController.h"
 
 @implementation TypeImageView{
     
@@ -24,7 +24,7 @@
         
         self.pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(sposta:)];
 
-        self.touch = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tocca:)];
+//        self.touch = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tocca:)];
         
         self.touch.numberOfTapsRequired = 1;
         
@@ -34,22 +34,11 @@
         
         [self addGestureRecognizer:self.pan];
         
-        [self addGestureRecognizer:self.touch];
-
     }
     
     return self;
 
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 /*-(UIPanGestureRecognizer *)pan{
     
@@ -95,23 +84,8 @@
 }
 
 -(void)tocca:(UITapGestureRecognizer*)sender{
-    if(sender.state == UIGestureRecognizerStatePossible)
+
     
-        NSLog(@"possibile");
-    
-    else if(sender.state == UIGestureRecognizerStateRecognized){
-        
-        NSLog(@"ciao");
-        
-    if(self.tag <= 2)
-        
-        self.doveVado = @"multipla";
-    
-    else
-        
-        self.doveVado = @"single";
-    }
-        
 }
 
 @end
