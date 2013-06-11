@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     [[DataManager sharedClass]setup];
 
     self.typeImage = @[@"Carne",@"Pesce",@"Verdure",@"Uovo",@"Frutta"];

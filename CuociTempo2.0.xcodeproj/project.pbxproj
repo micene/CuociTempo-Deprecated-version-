@@ -225,8 +225,6 @@
 				1D53065A174B9A8900B2B701 /* Alimento.m */,
 				1D0BC4A41725585200798850 /* TimerViewController.h */,
 				1D0BC4A51725585200798850 /* TimerViewController.m */,
-				1D65BA5D1722BE92002B990F /* TypeCell.h */,
-				1D65BA5E1722BE92002B990F /* TypeCell.m */,
 				1D65BA541722B866002B990F /* ListaTipoTableViewController.h */,
 				1D65BA551722B866002B990F /* ListaTipoTableViewController.m */,
 				1D65BA571722B87C002B990F /* DataManager.h */,
@@ -247,6 +245,8 @@
 		1D2546F51767335D0087DC67 /* unserve */ = {
 			isa = PBXGroup;
 			children = (
+				1D65BA5D1722BE92002B990F /* TypeCell.h */,
+				1D65BA5E1722BE92002B990F /* TypeCell.m */,
 				1D65BA5A1722BE63002B990F /* HomeCollectionViewController.h */,
 				1D65BA5B1722BE63002B990F /* HomeCollectionViewController.m */,
 			);
