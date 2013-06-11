@@ -41,6 +41,8 @@ static DataManager* sharedClassInstance = nil;
         
         [self creaAlimento:@"Pesce" nome:@"Nasello" cottura250:@"4" cottura500:@"5" cottura1000:@"6"];
 
+        [self creaAlimento:@"Verdure" nome:@"Asparagi" cottura250:@"4" cottura500:@"5" cottura1000:@"6"];
+        
         [self creaAlimento:@"Frutta" nome:@"Frutta" cottura250:@"4" cottura500:@"5" cottura1000:@"6"];
 
         [self creaAlimento:@"Uovo" nome:@"Uovo" cottura250:@"4" cottura500:@"5" cottura1000:@"6"];

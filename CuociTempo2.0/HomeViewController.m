@@ -8,10 +8,16 @@
 
 #import "HomeViewController.h"
 #import "TypeImageView.h"
+#import "DataManager.h"
+#import "ListaTipoTableViewController.h"
+#import "PesoViewController.h"
 
 #define DIMENSION 50
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+    
+    int tag;
+}
 
 @end
 
@@ -21,8 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[DataManager sharedClass]setup];
 
-    self.typeImage = @[@"Carne.jpg",@"Pesce.jpg",@"Verdure.jpg",@"Uovo.jpg",@"Frutta.jpg"];
+    self.typeImage = @[@"Carne",@"Pesce",@"Verdure",@"Uovo",@"Frutta"];
     
     [self creaFinestra];
         
@@ -39,11 +47,19 @@
             
             self.type = [[TypeImageView alloc] initWithFrame:CGRectMake(rand()%300, rand()%300, DIMENSION, DIMENSION)];
             
-            self.type.image =  [UIImage imageNamed:self.typeImage[i]];
+            self.type.image =  [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.typeImage[i]]];
             
             self.type.tag = i;
             
+            self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
             
+            self.bottone.tag = i;
+            
+            self.bottone.frame = self.type.bounds;
+            
+            [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.type addSubview:self.bottone];
             
             [self.view addSubview:self.type];
             
@@ -61,7 +77,17 @@
             
             self.type.tag = i;
             
-            self.type.image =  [UIImage imageNamed:self.typeImage[i]];
+            self.type.image =  [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.typeImage[i]]];
+            
+            self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
+            
+            self.bottone.tag = i;
+            
+            self.bottone.frame = self.type.bounds;
+                        
+            [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.type addSubview:self.bottone];
             
             [self.view addSubview:self.type];
             
@@ -72,15 +98,26 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+
     //verifichiamo ql "segue" vogliamo visualizzare attraverso  identifier
-    if ([segue.identifier isEqualToString:@"multipla"]) {
+    if ([segue.identifier isEqualToString:@"tipo"]) {
         
+        ListaTipoTableViewController * lista_tipo = [segue destinationViewController];
         
-        NSLog(@"sadsadas");
-               
+        NSLog(@"tag %i\n%@",tag,self.typeImage[tag]);
+                
+        lista_tipo.title = self.typeImage[tag];
+        
+    }else if([segue.identifier isEqualToString:@"peso"]){
+                
+        PesoViewController *peso = segue.destinationViewController;
+        
+        peso.alimento = [[DataManager sharedClass] dammiAlimentoCompleto:self.typeImage[tag]];
+        
     }
+
     
 }
 
@@ -88,6 +125,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+}
+
+-(IBAction)premuto:(id)sender
+{
+    
+    NSLog(@"sender%i",[sender tag]);
+    
+    tag = [sender tag]; 
+    
+    if([sender tag] <= 2)
+        [self performSegueWithIdentifier:@"tipo" sender:self];
+    
+    else
+        [self performSegueWithIdentifier:@"peso" sender:self];
+        
     
 }
 
@@ -160,4 +213,6 @@
     }
     
 }*/
+
+
 @end

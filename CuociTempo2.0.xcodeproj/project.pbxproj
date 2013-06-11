@@ -210,6 +210,7 @@
 		1D20FB08175F1656008B6859 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D2546F51767335D0087DC67 /* unserve */,
 				1DA9A483175DFC0C00D42AC9 /* HomeViewController.h */,
 				1DA9A484175DFC0C00D42AC9 /* HomeViewController.m */,
 				1D20FB0A175F24E4008B6859 /* TypeImageView.h */,
@@ -226,8 +227,6 @@
 				1D0BC4A51725585200798850 /* TimerViewController.m */,
 				1D65BA5D1722BE92002B990F /* TypeCell.h */,
 				1D65BA5E1722BE92002B990F /* TypeCell.m */,
-				1D65BA5A1722BE63002B990F /* HomeCollectionViewController.h */,
-				1D65BA5B1722BE63002B990F /* HomeCollectionViewController.m */,
 				1D65BA541722B866002B990F /* ListaTipoTableViewController.h */,
 				1D65BA551722B866002B990F /* ListaTipoTableViewController.m */,
 				1D65BA571722B87C002B990F /* DataManager.h */,
@@ -243,6 +242,15 @@
 				1D65B9E91722B6D1002B990F /* MainStoryboard.storyboard */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1D2546F51767335D0087DC67 /* unserve */ = {
+			isa = PBXGroup;
+			children = (
+				1D65BA5A1722BE63002B990F /* HomeCollectionViewController.h */,
+				1D65BA5B1722BE63002B990F /* HomeCollectionViewController.m */,
+			);
+			name = unserve;
 			sourceTree = "<group>";
 		};
 		1D65B9C51722B6D0002B990F = {

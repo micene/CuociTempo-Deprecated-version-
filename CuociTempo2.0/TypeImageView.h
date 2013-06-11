@@ -14,8 +14,6 @@
 
 @property (retain,nonatomic) UIPanGestureRecognizer * pan;
 
-@property (retain,nonatomic) UITapGestureRecognizer * touch;
-
-@property (weak,nonatomic) HomeViewController * home;
+@property (retain,nonatomic) UIButton * bottone;
 
 @end

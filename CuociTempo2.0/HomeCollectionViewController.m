@@ -52,12 +52,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    NSString * cella = @"cell";
-
     TypeCell * cell;
-    
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-   // NSLog(@"%@",cell.reuseIdentifier);
+
     
     UIImage *typeImage = [[UIImage alloc] init];
     typeImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[self.typeImage objectAtIndex:indexPath.row]]];
@@ -70,8 +67,6 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-   // NSLog(@"didsewe %i",indexPath.row);
     
     indice = indexPath.row;
     

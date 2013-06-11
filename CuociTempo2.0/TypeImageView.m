@@ -8,6 +8,7 @@
 
 #import "TypeImageView.h"
 #import "HomeViewController.h"
+#import "ListaTipoTableViewController.h"
 
 @implementation TypeImageView{
     
@@ -23,12 +24,14 @@
     if (self) {
         
         self.pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(sposta:)];
-
-//        self.touch = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tocca:)];
         
-        self.touch.numberOfTapsRequired = 1;
+//        self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        self.touch.delegate  = self;
+//        self.bottone.frame = self.bounds;
+        
+//        [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
+        
+//        [self addSubview:self.bottone];
         
         [self setUserInteractionEnabled:YES];
         
@@ -39,18 +42,6 @@
     return self;
 
 }
-
-/*-(UIPanGestureRecognizer *)pan{
-    
-    if (_pan) {
-        NSLog(@"esisto");
-        return _pan;
-    }
-    
-    _pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(gesture:)];
-    // [_pan setDelegate:self];
-    return _pan;
-}*/
 
 -(void)sposta:(UIPanGestureRecognizer*)sender
 {
@@ -76,16 +67,9 @@
         [[NSUserDefaults standardUserDefaults] setObject:frame forKey:[NSString stringWithFormat:@"frame%i",piece.tag]];
         
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
-        
+    
     }
 
-}
-
--(void)tocca:(UITapGestureRecognizer*)sender{
-
-    
 }
 
 @end

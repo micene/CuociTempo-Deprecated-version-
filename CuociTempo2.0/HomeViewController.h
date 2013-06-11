@@ -11,13 +11,12 @@
 
 @interface HomeViewController : UIViewController <UIGestureRecognizerDelegate>
 
-@property (retain,nonatomic) UITapGestureRecognizer * touch;
-
-//- (IBAction)pan:(id)sender;
-
 @property (strong,nonatomic) TypeImageView * type;
 
 @property (strong, nonatomic) NSArray *typeImage;
+
+@property (retain,nonatomic) UIButton * bottone;
+
 
 
 @end
