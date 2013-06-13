@@ -11,6 +11,7 @@
 #import "DataManager.h"
 #import "ListaTipoTableViewController.h"
 #import "PesoViewController.h"
+#import "ListaCompletaViewController.h"
 
 #define DIMENSION 50
 
@@ -36,6 +37,25 @@
         
 }
 
+-(void)dettagli:(int)i{
+    
+    self.type.tag = i;
+    
+    self.type.image =  [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.typeImage[i]]];
+    
+    self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    self.bottone.tag = i;
+    
+    self.bottone.frame = self.type.bounds;
+    
+    [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.type addSubview:self.bottone];
+    
+    [self.view addSubview:self.type];
+    
+}
 
 -(void)creaFinestra{
     
@@ -46,22 +66,8 @@
         for(int i = 0; i < self.typeImage.count; i++){
             
             self.type = [[TypeImageView alloc] initWithFrame:CGRectMake(rand()%300, rand()%300, DIMENSION, DIMENSION)];
-            
-            self.type.image =  [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.typeImage[i]]];
-            
-            self.type.tag = i;
-            
-            self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
-            
-            self.bottone.tag = i;
-            
-            self.bottone.frame = self.type.bounds;
-            
-            [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
-            
-            [self.type addSubview:self.bottone];
-            
-            [self.view addSubview:self.type];
+                        
+            [self dettagli:i];
             
             [prefs setObject:NSStringFromCGRect(self.type.frame) forKey:[NSString stringWithFormat:@"frame%i",i]];
         
@@ -75,22 +81,7 @@
             
             self.type = [[TypeImageView alloc] initWithFrame:CGRectFromString([prefs objectForKey:[NSString stringWithFormat:@"frame%i",i]])];
             
-            self.type.tag = i;
-            
-            self.type.image =  [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",self.typeImage[i]]];
-            
-            self.bottone = [UIButton buttonWithType:UIButtonTypeCustom];
-            
-            self.bottone.tag = i;
-            
-            self.bottone.frame = self.type.bounds;
-                        
-            [self.bottone addTarget:self action:@selector(premuto:) forControlEvents:UIControlEventTouchUpInside];
-            
-            [self.type addSubview:self.bottone];
-            
-            [self.view addSubview:self.type];
-            
+            [self dettagli:i];
         }
     
     }
@@ -101,22 +92,30 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
-    //verifichiamo ql "segue" vogliamo visualizzare attraverso  identifier
-    if ([segue.identifier isEqualToString:@"tipo"]) {
+    if ([segue.identifier isEqualToString:@"lista"] ) {
         
-        ListaTipoTableViewController * lista_tipo = [segue destinationViewController];
+        ListaCompletaViewController* lista_completa = segue.destinationViewController;
         
-        NSLog(@"tag %i\n%@",tag,self.typeImage[tag]);
-                
-        lista_tipo.title = self.typeImage[tag];
+        lista_completa.sezioni = self.typeImage;
         
-    }else if([segue.identifier isEqualToString:@"peso"]){
-                
-        PesoViewController *peso = segue.destinationViewController;
+    }else{
         
-        peso.alimento = [[DataManager sharedClass] dammiAlimentoCompleto:self.typeImage[tag]];
+        if([segue.identifier isEqualToString:@"tipo"]){
+            
+            ListaTipoTableViewController * lista_tipo = [segue destinationViewController];
+            
+            lista_tipo.title = self.typeImage[tag];
+            
+        }else if([segue.identifier isEqualToString:@"peso"]){
+                        
+            PesoViewController *peso = segue.destinationViewController;
+            
+            peso.alimento = [[DataManager sharedClass] dammiAlimentoCompleto:self.typeImage[tag]];
+            
+        }
         
     }
+
 
     
 }

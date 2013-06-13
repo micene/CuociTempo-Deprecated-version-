@@ -17,6 +17,4 @@
 
 @property (retain,nonatomic) UIButton * bottone;
 
-
-
 @end

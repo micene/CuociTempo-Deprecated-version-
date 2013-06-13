@@ -13,7 +13,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="37M-C4-IKY"/>
+                    <navigationItem key="navigationItem" id="fpN-IC-mXZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Euw-qP-f9f">
+                            <connections>
+                                <segue destination="TeJ-oR-5CO" kind="push" identifier="lista" id="SKh-lE-w0L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ir4-RY-Lad" kind="push" identifier="tipo" id="1Tl-fj-upb"/>
                         <segue destination="LCE-lf-4yr" kind="push" identifier="peso" id="lU7-8O-co0"/>
@@ -87,7 +93,7 @@
             <objects>
                 <tableViewController id="TeJ-oR-5CO" customClass="ListaCompletaViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iWF-XP-daV">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
